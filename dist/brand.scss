@@ -1,0 +1,6 @@
+$public-sans-directory: "" !default;
+
+@use "bootstrap";
+@use "public-sans" with (
+  $directory: $public-sans-directory
+);
