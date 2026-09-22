@@ -17,7 +17,7 @@
     }
   },
   "scripts": {
-    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --pkg-importer=node --quiet-deps --silence-deprecation=import",
+    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --load-path=node_modules --pkg-importer=node --quiet-deps --silence-deprecation=import",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
@@ -37,6 +37,7 @@
   "peerDependencies": {
     "@fontsource-utils/scss": "0.2.x",
     "@fontsource/public-sans": "5.x",
+    "@fortawesome/fontawesome-free": "7.x",
     "bootstrap": "5.3.x"
   },
   "allowScripts": {
