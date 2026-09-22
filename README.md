@@ -1,0 +1,48 @@
+# brand
+
+Branding for rails apps.
+
+## Usage
+
+TODO: Fill in.
+
+## Contributing
+
+Bug reports and pull requests are welcome on [GitHub][github].
+
+Due to automatic version detection in our release process, **all commits to the master branch must follow
+[conventional commits][conventional-commits] formatting.** Pay close attention to this when squashing your PRs and
+setting your commit messages on the main branch.
+
+## Development
+
+TODO: Fill in.
+
+### Requirements
+
+TODO: Fill in.
+
+### Setup
+
+TODO: Fill in.
+
+### Scripts
+
+TODO: Fill in.
+
+## Release
+
+Releases are (mostly) automated using [semantic-release][semantic-release]. It can be run using the `deploy.yml` github
+action, which has a manual `workflow_dispatch` trigger.
+
+Again, **all commits to the master branch must follow [conventional commits][conventional-commits] format.** Verify
+that all commits since the last release adhere to the standard before triggering a release.
+
+## License
+
+The application is available as open source under the terms of the [MIT License](license).
+
+[conventional-commits]: https://www.conventionalcommits.org/en/v1.0.0/#summary
+[github]: https://github.com/umts/brand
+[license]: https://opensource.org/licenses/MIT
+[semantic-release]: https://github.com/semantic-release/semantic-release

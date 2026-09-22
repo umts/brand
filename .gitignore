@@ -1,0 +1,10 @@
+/coverage/
+/node_modules/
+/pkg/
+/spec/dummy/app/assets/builds/
+/spec/dummy/log/
+/spec/dummy/public/assets/
+/spec/dummy/tmp/
+/spec/examples.txt
+umts-brand-*.gem
+umts-brand-*.tgz

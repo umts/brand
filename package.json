@@ -1,0 +1,40 @@
+{
+  "name": "@umts/brand",
+  "version": "0.0.0-dev",
+  "description": "Branding for rails apps.",
+  "repository": {
+    "url": "https://github.com/umts/brand"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "sass": "./dist/index.scss"
+    }
+  },
+  "scripts": {
+    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --load-path=node_modules",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:css": "stylelint **/*.css **/*.scss"
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "< 10",
+    "oxfmt": "*",
+    "oxlint": "*",
+    "run-pty": "*",
+    "sass": "*",
+    "semantic-release": "*",
+    "stylelint": "*",
+    "stylelint-config-standard": "*",
+    "stylelint-config-standard-scss": "*"
+  },
+  "allowScripts": {
+    "@parcel/watcher": true
+  }
+}
