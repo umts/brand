@@ -12,8 +12,11 @@
   ],
   "type": "module",
   "exports": {
-    ".": {
-      "sass": "./dist/brand.scss"
+    "./bootstrap": {
+      "sass": "./dist/bootstrap.scss"
+    },
+    "./public-sans": {
+      "sass": "./dist/public-sans.scss"
     }
   },
   "scripts": {
