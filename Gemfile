@@ -8,6 +8,7 @@ gem 'capybara'
 gem 'cssbundling-rails'
 gem 'haml-lint', require: false
 gem 'haml-rails'
+gem 'listen'
 gem 'overcommit', require: false
 gem 'propshaft'
 gem 'puma', require: false
@@ -20,3 +21,4 @@ gem 'rubocop-rake', require: false
 gem 'rubocop-rspec', require: false
 gem 'rubocop-rspec_rails', require: false
 gem 'simplecov', require: false
+gem 'web-console'
