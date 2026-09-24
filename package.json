@@ -15,6 +15,9 @@
     "./bootstrap": {
       "sass": "./dist/bootstrap.scss"
     },
+    "./fontawesome": {
+      "sass": "./dist/fontawesome.scss"
+    },
     "./public-sans": {
       "sass": "./dist/public-sans.scss"
     }
@@ -28,6 +31,7 @@
     "lint:css": "stylelint **/*.css **/*.scss"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "*",
     "conventional-changelog-conventionalcommits": "< 10",
     "oxfmt": "*",
     "oxlint": "*",
@@ -42,7 +46,13 @@
   "peerDependencies": {
     "@fontsource-utils/scss": "0.2.*",
     "@fontsource/public-sans": "5.*",
-    "bootstrap": "5.3.x"
+    "@fortawesome/fontawesome-free": "7.*",
+    "bootstrap": "5.3.*"
+  },
+  "peerDependenciesMeta": {
+    "@fortawesome/fontawesome-free": {
+      "optional": true
+    }
   },
   "allowScripts": {
     "@parcel/watcher": true,
