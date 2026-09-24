@@ -23,7 +23,6 @@
     }
   },
   "scripts": {
-    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --load-path=node_modules --pkg-importer=node --quiet-deps --silence-deprecation=import",
     "docs": "vitepress dev docs",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
@@ -31,12 +30,9 @@
     "lint:css": "stylelint **/*.css **/*.scss"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "*",
     "conventional-changelog-conventionalcommits": "< 10",
     "oxfmt": "*",
     "oxlint": "*",
-    "run-pty": "*",
-    "sass": "*",
     "semantic-release": "*",
     "stylelint": "*",
     "stylelint-config-standard": "*",

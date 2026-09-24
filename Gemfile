@@ -8,6 +8,7 @@ gem 'capybara'
 gem 'cssbundling-rails'
 gem 'haml-lint', require: false
 gem 'haml-rails'
+gem 'jsbundling-rails'
 gem 'listen'
 gem 'overcommit', require: false
 gem 'propshaft'

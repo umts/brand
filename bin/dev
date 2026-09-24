@@ -1,4 +1,5 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
+#!/usr/bin/env bash
 
-exec 'npx', 'run-pty', 'run-pty.json', *ARGV
+set -e
+cd "$(dirname "$0")/../spec/dummy"
+exec npx run-pty run-pty.json "$@"

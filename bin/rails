@@ -1,6 +1,5 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
+#!/usr/bin/env bash
 
-APP_PATH = File.expand_path('../spec/dummy/config/application', __dir__)
-require_relative '../spec/dummy/config/boot'
-require 'rails/commands'
+set -e
+cd "$(dirname "$0")/../spec/dummy"
+exec bin/rails "$@"

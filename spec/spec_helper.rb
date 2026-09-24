@@ -3,8 +3,8 @@
 require 'simplecov'
 
 SimpleCov.start do
-  cover '{app,lib}/**/*.{rb,haml}'
-  cover_views
+  cover '{app,lib}/**/*.{rb}'
+  cover_views 'app/**/*.haml'
   skip 'lib/umts/brand/version.rb'
   track_tests
   enable_coverage :branch
@@ -12,6 +12,7 @@ SimpleCov.start do
 end
 
 RSpec.configure do |config|
+  config.exclude_pattern = 'spec/dummy/node_modules/*/*/**/*_spec.rb'
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end

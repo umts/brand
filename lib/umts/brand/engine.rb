@@ -4,7 +4,7 @@ require 'rails'
 
 module UMTS
   module Brand
-    class Railtie < ::Rails::Railtie
+    class Engine < ::Rails::Engine
       initializer 'umts-brand.asset' do
         Rails.application.config.assets.paths << Rails.root.join('node_modules/@fontsource/public-sans/files')
         Rails.application.config.assets.paths << Rails.root.join('node_modules/@fortawesome/fontawesome-free/webfonts')

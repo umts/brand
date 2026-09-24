@@ -16,7 +16,7 @@ setting your commit messages on the main branch.
 
 ## Development
 
-- gem distribution files are located in `lib/`
+- gem distribution files are located in `app/` and `lib/`
 - npm distribution files are located in `dist/`
 
 ### Requirements

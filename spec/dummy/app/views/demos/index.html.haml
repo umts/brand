@@ -1,7 +1,7 @@
-%section.container.my-3
-  %h1
-    umts-brand
-  %hr
+- nav_items = capture do
+  - 3.times do |n|
+    %li.nav-item= link_to "Link #{n}", '#', class: 'nav-link'
+= render layout: 'umts/brand/tabbed', locals: { heading: 'umts-brand', nav_items:, nav_expand: 'sm' } do
   .card
     .card-header
       %i.fa-brands.fa-bootstrap
