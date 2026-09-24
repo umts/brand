@@ -4,7 +4,7 @@ Branding for rails apps.
 
 ## Usage
 
-Documentation is hosted on [github pages](https://github.io/umts/brand).
+Documentation is hosted on [github pages](https://umts.github.io/brand/).
 
 ## Contributing
 
