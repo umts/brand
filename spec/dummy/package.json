@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rolldown app/javascript/application.js --dir app/assets/builds --sourcemap",
+    "build": "rolldown app/javascript/application.js --dir app/assets/builds --format esm --sourcemap",
     "build:css": "sass app/assets/stylesheets/application.scss:app/assets/builds/application.css --load-path=node_modules --pkg-importer=node --quiet-deps --silence-deprecation=import"
   },
   "dependencies": {
