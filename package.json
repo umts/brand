@@ -36,6 +36,10 @@
     "stylelint-config-standard-scss": "*",
     "vitepress": "2.0.0-alpha.20"
   },
+  "peerDependencies": {
+    "@fontsource-utils/scss": "0.2.*",
+    "@fontsource/public-sans": "5.*"
+  },
   "allowScripts": {
     "@parcel/watcher": true,
     "fsevents": true
