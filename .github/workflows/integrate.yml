@@ -1,0 +1,18 @@
+on:
+  workflow_call:
+jobs:
+  haml-lint:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/haml-lint.yml@main
+  oxfmt:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/oxfmt.yml@main
+  oxlint:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/oxlint.yml@main
+  rubocop:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/rubocop.yml@main
+  stylelint:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/stylelint.yml@main
