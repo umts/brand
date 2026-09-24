@@ -24,9 +24,9 @@ should be the source of truth for bootstrap customizations).
 @use "pkg:@umts/brand/fontawesome";
 ```
 
-Preconfigured with brand, regular and solid icons and with the propshaft compatible asset path provided by the engine.
+Preconfigured with brand/regular/solid icons and with the propshaft compatible asset path provided by the engine.
 
-Also re-exports scss variables/mixins. Variants are namespaced under `brand-`/`regular-`/`solid-`.
+Re-exports scss variables/mixins. Variants are namespaced under `brand-`/`regular-`/`solid-`.
 
 ### Options
 
