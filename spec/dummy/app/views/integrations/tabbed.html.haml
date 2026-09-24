@@ -1,0 +1,8 @@
+.mb-3
+  = render layout: 'umts/brand/tabbed', locals: { heading: 'Bare heading' } do
+    Bare content
+.mb-3
+  - nav_items = capture do
+    %li.nav-item= link_to 'Nav link', '#', class: 'nav-link'
+  = render layout: 'umts/brand/tabbed', locals: { heading: 'Nav heading', nav_items: } do
+    Nav content
