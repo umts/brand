@@ -1,5 +1,10 @@
 export default {
-  ignoreFiles: ["app/assets/builds/*", "coverage/**/*", "node_modules/**/*", "public/assets/**/*"],
+  ignoreFiles: [
+    "spec/dummy/app/assets/builds/*",
+    "coverage/**/*",
+    "node_modules/**/*",
+    "spec/dummy/public/assets/**/*",
+  ],
   extends: "stylelint-config-standard",
   overrides: [
     {
