@@ -8,3 +8,8 @@ on:
 jobs:
   integrate:
     uses: ./.github/workflows/integrate.yml
+  document:
+    permissions:
+      pages: write
+      id-token: write
+    uses: umts/shared-workflows/.github/workflows/pages-vitepress.yml@main

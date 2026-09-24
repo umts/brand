@@ -1,10 +1,10 @@
-# brand
+# umts-brand
 
 Branding for rails apps.
 
 ## Usage
 
-TODO: Fill in.
+Documentation is hosted on [github pages](https://umts.github.io/brand/).
 
 ## Contributing
 
@@ -16,23 +16,41 @@ setting your commit messages on the main branch.
 
 ## Development
 
-TODO: Fill in.
+- gem distribution files are located in `lib/`
+- npm distribution files are located in `dist/`
 
 ### Requirements
 
-TODO: Fill in.
+- ruby
+- node.js
 
 ### Setup
 
-TODO: Fill in.
+```bash
+bin/setup
+```
 
 ### Scripts
 
-TODO: Fill in.
+```bash
+bin/dev           # development rails server
+bin/haml-lint     # haml linter
+bin/rails         # manage development rails server
+bin/rake          # invoke task runner
+bin/rspec         # tests
+bin/rubocop       # ruby linter
+bin/setup         # setup script
+npm run build:css # build development rails css
+npm run docs      # build and serve documentation locally
+npm run fmt       # formatter
+npm run fmt:check # formatter (without corrections)
+npm run lint      # javascript linter
+npm run lint:css  # css linter
+```
 
 ## Release
 
-Releases are (mostly) automated using [semantic-release][semantic-release]. It can be run using the `deploy.yml` github
+Releases are (mostly) automated using [semantic-release][semantic-release]. It can be run using the `release.yml` github
 action, which has a manual `workflow_dispatch` trigger.
 
 Again, **all commits to the master branch must follow [conventional commits][conventional-commits] format.** Verify

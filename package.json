@@ -44,6 +44,7 @@
     "bootstrap": "5.3.x"
   },
   "allowScripts": {
-    "@parcel/watcher": true
+    "@parcel/watcher": true,
+    "fsevents": true
   }
 }
