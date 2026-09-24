@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "sass app/assets/stylesheets/application.scss:app/assets/builds/application.css --load-path=node_modules --pkg-importer=node --quiet-deps --silence-deprecation=import"
+  },
+  "dependencies": {
+    "@fontsource-utils/scss": "*",
+    "@fontsource/public-sans": "*",
+    "@fortawesome/fontawesome-free": "*",
+    "@umts/brand": "file:../..",
+    "bootstrap": "*",
+    "run-pty": "*",
+    "sass": "*"
+  },
+  "allowScripts": {
+    "@parcel/watcher": true
+  }
+}
