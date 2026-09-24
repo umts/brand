@@ -18,6 +18,22 @@ Preconfigured with dark mode and UMass brand colors.
 Passed variables will be forwarded to the bootstrap stylesheet, although this is not recommended (this library
 should be the source of truth for bootstrap customizations).
 
+## fontawesome
+
+```scss
+@use "pkg:@umts/brand/fontawesome";
+```
+
+Preconfigured with brand, regular and solid icons and with the propshaft compatible asset path provided by the engine.
+
+Also re-exports scss variables/mixins. Variants are namespaced under `brand-`/`regular-`/`solid-`.
+
+### Options
+
+```scss
+$asset-path: "your-path"; /* path where font files are located (for apps still using sprockets) */
+```
+
 ## public-sans
 
 ```scss
