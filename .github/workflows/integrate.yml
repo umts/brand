@@ -15,7 +15,7 @@ jobs:
     uses: umts/shared-workflows/.github/workflows/rspec.yml@main
     with:
       node: true
-      setup_command: "bin/rails css:build"
+      setup_command: "bin/rails javascript:build css:build"
   rubocop:
     name: lib
     uses: umts/shared-workflows/.github/workflows/rubocop.yml@main
