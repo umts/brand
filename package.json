@@ -12,12 +12,12 @@
   ],
   "type": "module",
   "exports": {
-    ".": {
-      "sass": "./dist/index.scss"
+    "./public-sans": {
+      "sass": "./dist/public-sans.scss"
     }
   },
   "scripts": {
-    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --load-path=node_modules",
+    "build:css": "sass spec/dummy/app/assets/stylesheets/application.scss:spec/dummy/app/assets/builds/application.css --load-path=node_modules --pkg-importer=node --quiet-deps --silence-deprecation=import",
     "docs": "vitepress dev docs",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
