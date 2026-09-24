@@ -10,6 +10,12 @@ jobs:
   oxlint:
     name: lib
     uses: umts/shared-workflows/.github/workflows/oxlint.yml@main
+  rspec:
+    name: lib
+    uses: umts/shared-workflows/.github/workflows/rspec.yml@main
+    with:
+      node: true
+      setup_command: "bin/rails css:build"
   rubocop:
     name: lib
     uses: umts/shared-workflows/.github/workflows/rubocop.yml@main
