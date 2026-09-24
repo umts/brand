@@ -21,4 +21,4 @@ gem 'rubocop-rake', require: false
 gem 'rubocop-rspec', require: false
 gem 'rubocop-rspec_rails', require: false
 gem 'simplecov', require: false
-gem 'web-console'
+gem 'web-console', group: :development
