@@ -8,26 +8,8 @@ on:
 jobs:
   integrate:
     uses: ./.github/workflows/integrate.yml
-  docs:
+  document:
     permissions:
       pages: write
       id-token: write
-    concurrency:
-      group: pages
-      cancel-in-progress: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .node-version
-          cache: npm
-      - run: npm ci
-      - run: npx vitepress build docs
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./docs/.vitepress/dist
-      - uses: actions/deploy-pages@v5
+    uses: umts/shared-workflows/.github/workflows/pages-vitepress.yml@main

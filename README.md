@@ -50,7 +50,7 @@ npm run lint:css  # css linter
 
 ## Release
 
-Releases are (mostly) automated using [semantic-release][semantic-release]. It can be run using the `deploy.yml` github
+Releases are (mostly) automated using [semantic-release][semantic-release]. It can be run using the `release.yml` github
 action, which has a manual `workflow_dispatch` trigger.
 
 Again, **all commits to the master branch must follow [conventional commits][conventional-commits] format.** Verify
