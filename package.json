@@ -38,7 +38,8 @@
   },
   "peerDependencies": {
     "@fontsource-utils/scss": "0.2.*",
-    "@fontsource/public-sans": "5.*"
+    "@fontsource/public-sans": "5.*",
+    "bootstrap": "5.3.x"
   },
   "allowScripts": {
     "@parcel/watcher": true,
