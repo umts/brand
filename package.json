@@ -12,6 +12,9 @@
   ],
   "type": "module",
   "exports": {
+    "./bootstrap": {
+      "sass": "./dist/bootstrap.scss"
+    },
     "./public-sans": {
       "sass": "./dist/public-sans.scss"
     }
