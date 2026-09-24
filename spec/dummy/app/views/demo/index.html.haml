@@ -1,1 +1,16 @@
-%h1 Home
+%section.container.my-3
+  %h1
+    umts-brand
+  %hr
+  .card
+    .card-header Bootstrap
+    .card-body
+      .alert.alert-primary
+        Primary alert
+      .alert.alert-neutral
+        Neutral alert
+      .row.row-cols-1.row-cols-md-2.g-3
+        .col
+          .d-grid= button_tag 'Primary button', type: 'button', class: 'btn btn-primary'
+        .col
+          .d-grid= button_tag 'Neutral button', type: 'button', class: 'btn btn-neutral'
