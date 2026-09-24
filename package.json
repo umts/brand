@@ -15,6 +15,9 @@
     "./bootstrap": {
       "sass": "./dist/bootstrap.scss"
     },
+    "./fontawesome": {
+      "sass": "./dist/fontawesome.scss"
+    },
     "./public-sans": {
       "sass": "./dist/public-sans.scss"
     }
