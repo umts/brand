@@ -1,0 +1,39 @@
+-# locals: (parent_department_name:, parent_department_link:, department_name:, department_link:)
+- if UMTS::Brand.using_university_trademarks
+  .bg-primary.text-white{ 'data-bs-theme': 'dark' }
+    .container
+      %nav.navbar.navbar-expand-sm
+        = link_to 'https://umass.edu', class: 'navbar-brand' do
+          = image_tag 'umts/brand/university-wordmark-longform.svg',
+                      alt: 'University of Massachusetts Amherst',
+                      height: '30px', class: 'd-none d-lg-block'
+          = image_tag 'umts/brand/university-wordmark-shortform.svg',
+                      alt: 'UMass Amherst',
+                      height: '30px', class: 'd-block d-lg-none'
+        = button_tag type: 'button', class: 'navbar-toggler',
+                     data: { 'bs-toggle': 'collapse', 'bs-target': '#university-header-nav-items' },
+                     aria: { controls: 'university-header-nav-items',
+                             expanded: 'false',
+                             label: 'Toggle UMass navigation' } do
+          %span.navbar-toggler-icon
+        #university-header-nav-items.collapse.navbar-collapse
+          %ul.navbar-nav.nav-underline.gap-1.ms-auto
+            %li.nav-item
+              = link_to 'Visit', 'https://www.umass.edu/admissions/undergraduate-admissions/visit',
+                        class: 'nav-link text-white'
+            %li.nav-item= link_to 'Apply', 'https://www.umass.edu/admissions', class: 'nav-link text-white'
+            %li.nav-item= link_to 'Give', 'https://www.umass.edu/give', class: 'nav-link text-white'
+            %li.nav-item
+              = link_to 'https://www.umass.edu/search', class: 'nav-link text-white' do
+                %i.fa-solid.fa-search
+                %span.visually-hidden Search
+  .bg-body.text-body.border-bottom
+    .container.py-4
+      .d-flex.align-items-center.gap-3
+        = image_tag 'umts/brand/university-collegiate-m.svg', alt: 'UMass', height: '70px'
+        .fs-4
+          .lh-sm
+            = link_to parent_department_name, parent_department_link, class: 'lh-sm text-body text-decoration-none'
+          .lh-sm
+            = link_to department_name, department_link,
+                      class: 'lh-sm text-primary-emphasis text-decoration-none fw-bold'

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Initializer' do
+RSpec.describe UMTS::Brand::Engine do
   it 'adds the fontawesome font directory to the application asset paths' do
     expect(Rails.application.config.assets.paths).to include(
       Rails.root.join('node_modules/@fortawesome/fontawesome-free/webfonts')
