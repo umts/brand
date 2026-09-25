@@ -9,6 +9,12 @@ module UMTS
         Rails.application.config.assets.paths << Rails.root.join('node_modules/@fontsource/public-sans/files')
         Rails.application.config.assets.paths << Rails.root.join('node_modules/@fortawesome/fontawesome-free/webfonts')
       end
+
+      initializer 'umts-brand.inflection' do
+        ActiveSupport::Inflector.inflections do |inflect|
+          inflect.acronym 'UMTS'
+        end
+      end
     end
   end
 end
