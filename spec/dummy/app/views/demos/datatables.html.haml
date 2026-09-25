@@ -1,0 +1,19 @@
+= render layout: 'layouts/demo', locals: { nav_item: 'datatables' } do
+  .card
+    .card-header
+      %i.fa-solid.fa-table
+      Datatables
+    .card-body
+      .table-responsive
+        %table.table.table-striped.table-hover{ 'data-controller': 'data-table' }
+          %thead
+            %tr
+              %th Text
+              %th Number
+              %th Date
+          %tbody
+            - 100.times do |n|
+              %tr
+                %td Text #{n}
+                %td= n
+                %td= l(n.days.ago.to_date)
