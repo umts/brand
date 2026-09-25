@@ -18,6 +18,19 @@ Preconfigured with dark mode and UMass brand colors.
 Passed variables will be forwarded to the bootstrap stylesheet, although this is not recommended (this library
 should be the source of truth for bootstrap customizations).
 
+## datatables
+
+```scss
+@use "pkg:@umts/brand/datatables";
+```
+
+Preconfigured with the bootstrap 5 theme.
+
+- adds support for media query dark theme
+- removes extra padding under `.table-responsive`
+- overrides alignment for numeric/date types
+- removes outlines for sortable headers and replaces them with a hover color
+
 ## fontawesome
 
 ```scss
