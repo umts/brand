@@ -5,7 +5,22 @@
       Datatables
     .card-body
       .table-responsive
-        %table.table.table-striped.table-hover{ 'data-controller': 'data-table' }
+        %table.table.table-striped.table-hover
+          %caption Normal table
+          %thead
+            %tr
+              %th Text
+              %th Number
+              %th Date
+          %tbody
+            - 10.times do |n|
+              %tr
+                %td Text #{n}
+                %td= n
+                %td= l(n.days.ago.to_date)
+      .table-responsive
+        %table.table.stripe.table-hover{ 'data-controller': 'data-table' }
+          %caption Data table
           %thead
             %tr
               %th Text

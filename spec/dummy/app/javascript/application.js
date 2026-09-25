@@ -1,5 +1,6 @@
 import "bootstrap";
 import { DataTable } from "datatables.net";
+import "datatables.net-bs5";
 import TomSelect from "tom-select";
 
 document.addEventListener("DOMContentLoaded", () => {
