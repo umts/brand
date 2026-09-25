@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'umts/brand/_tabbed.html.haml', type: :view do
+RSpec.describe 'umts/brand/_tabbed.html.haml' do
   before { render(layout: 'umts/brand/tabbed', locals:) { content } }
 
   context 'without nav items' do

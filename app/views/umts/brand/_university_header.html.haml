@@ -1,12 +1,5 @@
--#
-  locals: (
-    university_trademarks:,
-    parent_department_name:,
-    parent_department_link:,
-    department_name:,
-    department_link:
-  )
-- if university_trademarks
+-# locals: (parent_department_name:, parent_department_link:, department_name:, department_link:)
+- if UMTS::Brand.using_university_trademarks
   .bg-primary.text-white{ 'data-bs-theme': 'dark' }
     .container
       %nav.navbar.navbar-expand-sm

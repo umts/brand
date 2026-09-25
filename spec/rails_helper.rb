@@ -7,12 +7,5 @@ require 'rspec/rails'
 
 RSpec.configure do |config|
   config.filter_rails_from_backtrace!
-
-  config.before :each, type: :system do
-    driven_by :rack_test
-  end
-
-  config.before :each, :js, type: :system do
-    driven_by :selenium, using: :headless_chrome
-  end
+  config.infer_spec_type_from_file_location!
 end

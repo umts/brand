@@ -2,21 +2,23 @@
 
 require 'rails_helper'
 
-RSpec.describe 'umts/brand/_university_footer.html.haml', type: :view do
-  before { render(partial: 'umts/brand/university_footer', locals:) }
+RSpec.describe 'umts/brand/_university_footer.html.haml' do
+  subject(:call) { render(partial: 'umts/brand/university_footer') }
 
   context 'without university trademark authorization' do
-    let(:locals) { { university_trademarks: false } }
+    before { allow(UMTS::Brand).to receive_messages(using_university_trademarks: false) }
 
     it 'renders nothing' do
+      call
       expect(rendered).to be_blank
     end
   end
 
   context 'with university trademark authorization' do
-    let(:locals) { { university_trademarks: true } }
+    before { allow(UMTS::Brand).to receive_messages(using_university_trademarks: true) }
 
     it 'renders with university branding' do
+      call
       expect(rendered).to have_text('University of Massachusetts Amherst')
     end
   end

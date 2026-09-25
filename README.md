@@ -40,7 +40,6 @@ bin/rake          # invoke task runner
 bin/rspec         # tests
 bin/rubocop       # ruby linter
 bin/setup         # setup script
-npm run build:css # build development rails css
 npm run docs      # build and serve documentation locally
 npm run fmt       # formatter
 npm run fmt:check # formatter (without corrections)

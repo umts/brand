@@ -2,6 +2,18 @@
 
 The following partials are automatically made available by the engine under `umts/brand/*`.
 
+> [!CAUTION]
+> Some views and assets contain trademarks of the university. Usage of these trademarks is permitted only for
+> internal, non-commercial use. See the license for more information.
+>
+> To guard against misuse, you must explicitly opt in to make these views available for use:
+>
+> ```ruby
+> # config/initializers/brand.rb
+>
+> UMTS::Brand.use_university_trademarks!
+> ```
+
 ## tabbed
 
 Our default page layout, which includes a heading and space for bootstrap nav items.
@@ -22,12 +34,6 @@ Our default page layout, which includes a heading and space for bootstrap nav it
 
 The branded UMass Amherst public page header, based off the official university branding guidelines.
 
-> [!CAUTION]
-> This partial contain trademarks of the university. Usage of these trademarks is permitted only for
-> internal, non-commercial use. See the license for more information.
->
-> To guard against misuse, you must pass the local `umass_trademarks: true` to get this partial to render.
-
 ```haml
 = render partial: 'umts/brand/university_header',
          locals: { parent_department_name: 'Facilities & Campus Services',
@@ -36,16 +42,16 @@ The branded UMass Amherst public page header, based off the official university 
                    department_link: 'https://www.umass.edu/transportation' }
 ```
 
+> [!WARNING]
+> Contains university trademarks (must opt in via initializer).
+
 ## university_footer
 
 The branded UMass Amherst public page footer, based off the official university branding guidelines.
 
-> [!CAUTION]
-> This partial contain trademarks of the university. Usage of these trademarks is permitted only for
-> internal, non-commercial use. See the license for more information.
->
-> To guard against misuse, you must pass the local `umass_trademarks: true` to get this partial to render.
-
 ```haml
 = render partial: 'umts/brand/university_footer'
 ```
+
+> [!WARNING]
+> Contains university trademarks (must opt in via initializer).

@@ -5,6 +5,20 @@ require_relative 'brand/version'
 
 module UMTS
   module Brand
-    # Your code goes here...
+    class << self
+      attr_reader :using_university_trademarks
+
+      def use_university_trademarks!
+        Rails.application.config.assets.paths += [trademark_root]
+        Rails.application.config.assets.precompile += trademark_paths
+        @using_university_trademarks = true
+      end
+
+      private
+
+      def trademark_root = Engine.root.join('app/trademarks/')
+
+      def trademark_paths = Dir.glob(trademark_root.join('**/*')).reject { |path| File.directory?(path) }
+    end
   end
 end
