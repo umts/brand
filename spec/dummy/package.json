@@ -13,7 +13,8 @@
     "bootstrap": "*",
     "rolldown": "*",
     "run-pty": "*",
-    "sass": "*"
+    "sass": "*",
+    "tom-select": "*"
   },
   "allowScripts": {
     "@parcel/watcher": true
