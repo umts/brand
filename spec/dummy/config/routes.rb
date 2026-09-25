@@ -2,4 +2,5 @@
 
 Rails.application.routes.draw do
   root 'demos#index'
+  get 'bootstrap', to: 'demos#bootstrap'
 end

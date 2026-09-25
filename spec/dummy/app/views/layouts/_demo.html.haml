@@ -1,0 +1,12 @@
+-# locals: (nav_item: nil)
+- nav_items = capture do
+  %li.nav-item
+    = link_to root_path, class: ['nav-link', nav_item == 'home' && 'active'] do
+      %i.fa-regular.fa-home
+      Home
+  %li.nav-item
+    = link_to bootstrap_path, class: ['nav-link', nav_item == 'bootstrap' && 'active'] do
+      %i.fa-brands.fa-bootstrap
+      Bootstrap
+= render layout: 'umts/brand/tabbed', locals: { heading: 'Demos', nav_items:, nav_expand: 'sm' } do
+  = yield
