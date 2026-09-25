@@ -17,3 +17,35 @@ Our default page layout, which includes a heading and space for bootstrap nav it
 = render layout: 'umts/brand/tabbed', locals: { heading: 'Navigable page title', nav_items:, nav_expand: 'sm' } do
   Navigable page content
 ```
+
+## university_header
+
+The branded UMass Amherst public page header, based off the official university branding guidelines.
+
+> [!CAUTION]
+> This partial contain trademarks of the university. Usage of these trademarks is permitted only for
+> internal, non-commercial use. See the license for more information.
+>
+> To guard against misuse, you must pass the local `umass_trademarks: true` to get this partial to render.
+
+```haml
+= render partial: 'umts/brand/university_header',
+         locals: { parent_department_name: 'Facilities & Campus Services',
+                   parent_department_link: 'https://www.umass.edu/facilities',
+                   department_name: 'Transportation Services',
+                   department_link: 'https://www.umass.edu/transportation' }
+```
+
+## university_footer
+
+The branded UMass Amherst public page footer, based off the official university branding guidelines.
+
+> [!CAUTION]
+> This partial contain trademarks of the university. Usage of these trademarks is permitted only for
+> internal, non-commercial use. See the license for more information.
+>
+> To guard against misuse, you must pass the local `umass_trademarks: true` to get this partial to render.
+
+```haml
+= render partial: 'umts/brand/university_footer'
+```
