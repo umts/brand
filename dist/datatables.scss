@@ -1,6 +1,18 @@
-// stylelint-disable selector-class-pattern
+// stylelint-disable selector-class-pattern, custom-property-pattern
 
 @use "datatables.net-bs5/css/dataTables.bootstrap5";
+
+// Apply dark theming based on media query.
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dt-order-arrow_color: rgb(229 233 238);
+    --dt-order-arrow_color-current: rgb(229 233 238);
+    --dt-order-header_outline-hover: 2px solid rgb(255 255 255 / 5%);
+    --dt-row_background-hover: 255, 255, 255;
+    --dt-row_background-stripe: 255, 255, 255;
+    --dt-column-ordering_background: 255, 255, 255;
+  }
+}
 
 // Remove horizontal padding that the bootstrap theme erroneously adds.
 div.table-responsive > div.dt-container > div.row {
