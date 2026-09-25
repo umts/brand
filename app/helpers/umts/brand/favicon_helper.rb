@@ -3,7 +3,7 @@
 module UMTS
   module Brand
     module FaviconHelper
-      def umts_brand_university_favicons
+      def umts_brand_favicons
         Brand.protect_university_trademarks!
         safe_join([
                     favicon_link_tag('umts/brand/university-collegiate-m.png', rel: 'icon', type: 'image/png'),

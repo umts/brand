@@ -3,8 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe UMTS::Brand::FaviconHelper do
-  describe '#umts_brand_university_favicons' do
-    subject(:call) { helper.umts_brand_university_favicons }
+  describe '#umts_brand_favicons' do
+    subject(:call) { helper.umts_brand_favicons }
 
     context 'without university trademark authorization' do
       before { allow(UMTS::Brand).to receive_messages(using_university_trademarks: false) }
