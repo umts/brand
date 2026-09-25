@@ -12,6 +12,7 @@ export default defineConfig({
           { text: "Setup", link: "/setup" },
           { text: "Styles", link: "/styles" },
           { text: "Views", link: "/views" },
+          { text: "Helpers", link: "/helpers" },
         ],
       },
     ],
