@@ -1,7 +1,25 @@
+// stylelint-disable selector-class-pattern
+
 @use "datatables.net-bs5/css/dataTables.bootstrap5";
 
 // Remove horizontal padding that the bootstrap theme erroneously adds
 div.table-responsive > div.dt-container > div.row {
   margin-left: calc(-0.5 * var(--bs-gutter-x));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
+}
+
+// Override right alignment rules for typed columns
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: unset;
+}
+
+// Override reversal rules for typed column headers
+table.dataTable th.dt-type-numeric div.dt-column-header,
+table.dataTable th.dt-type-numeric div.dt-column-footer,
+table.dataTable th.dt-type-date div.dt-column-header,
+table.dataTable th.dt-type-date div.dt-column-footer {
+  flex-direction: row;
 }
