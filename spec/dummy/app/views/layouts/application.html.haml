@@ -7,12 +7,11 @@
   %body.min-vh-100.d-flex.flex-column.flex-nowrap.align-items-stretch.bg-primary
     %header
       = render partial: 'umts/brand/university_header',
-               locals: { university_trademarks: true,
-                         parent_department_name: 'Facilities & Campus Services',
+               locals: { parent_department_name: 'Facilities & Campus Services',
                          parent_department_link: 'https://www.umass.edu/facilities',
                          department_name: 'Transportation Services',
                          department_link: 'https://www.umass.edu/transportation' }
     %main.bg-body.flex-grow-1
       .container.my-3
         = yield
-    %footer= render partial: 'umts/brand/university_footer', locals: { university_trademarks: true }
+    %footer= render partial: 'umts/brand/university_footer'
