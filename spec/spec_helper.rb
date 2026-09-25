@@ -3,11 +3,11 @@
 require 'simplecov'
 
 SimpleCov.start do
-  cover '{app,lib}/**/*.{rb}'
-  cover_views 'app/**/*.haml'
+  cover '{app,lib}/**/*.{rb,haml}'
+  cover_views '{app,lib}/**/*.haml'
   skip 'lib/umts/brand/version.rb'
   track_tests
-  enable_coverage :branch
+  enable_coverage :branch, :method
   minimum_coverage line: 100, branch: 100
 end
 
