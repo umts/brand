@@ -14,6 +14,12 @@ module UMTS
         @using_university_trademarks = true
       end
 
+      def protect_university_trademarks!
+        return if using_university_trademarks
+
+        raise 'Not opted in to university trademarks'
+      end
+
       private
 
       def trademark_root = Engine.root.join('app/trademarks/')

@@ -23,3 +23,15 @@ At the very minimum, you will want to use the `public-sans` and `bootstrap` styl
 @use "pkg:@umts/brand/bootstrap";
 @use "pkg:@umts/brand/public-sans";
 ```
+
+> [!CAUTION]
+> Some views and assets contain trademarks of the university. Usage of these trademarks is permitted only for
+> internal, non-commercial use. See the license for more information.
+>
+> To guard against misuse, you must explicitly opt in to make these views available for use:
+>
+> ```ruby
+> # config/initializers/brand.rb
+>
+> UMTS::Brand.use_university_trademarks!
+> ```

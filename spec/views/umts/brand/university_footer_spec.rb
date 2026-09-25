@@ -8,9 +8,8 @@ RSpec.describe 'umts/brand/_university_footer.html.haml' do
   context 'without university trademark authorization' do
     before { allow(UMTS::Brand).to receive_messages(using_university_trademarks: false) }
 
-    it 'renders nothing' do
-      call
-      expect(rendered).to be_blank
+    it 'raises an error' do
+      expect { call }.to raise_error(String)
     end
   end
 

@@ -2,18 +2,6 @@
 
 The following partials are automatically made available by the engine under `umts/brand/*`.
 
-> [!CAUTION]
-> Some views and assets contain trademarks of the university. Usage of these trademarks is permitted only for
-> internal, non-commercial use. See the license for more information.
->
-> To guard against misuse, you must explicitly opt in to make these views available for use:
->
-> ```ruby
-> # config/initializers/brand.rb
->
-> UMTS::Brand.use_university_trademarks!
-> ```
-
 ## tabbed
 
 Our default page layout, which includes a heading and space for bootstrap nav items.
