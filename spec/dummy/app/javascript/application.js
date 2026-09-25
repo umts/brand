@@ -1,7 +1,12 @@
 import "bootstrap";
+import { DataTable } from "datatables.net";
+import "datatables.net-bs5";
 import TomSelect from "tom-select";
 
 document.addEventListener("DOMContentLoaded", () => {
+  for (const el of document.querySelectorAll('[data-controller="data-table"]')) {
+    new DataTable(el);
+  }
   for (const el of document.querySelectorAll('[data-controller="tom-select"]')) {
     const options = {
       create: false,

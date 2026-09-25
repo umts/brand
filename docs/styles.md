@@ -18,6 +18,19 @@ Preconfigured with dark mode and UMass brand colors.
 Passed variables will be forwarded to the bootstrap stylesheet, although this is not recommended (this library
 should be the source of truth for bootstrap customizations).
 
+## datatables.net
+
+```scss
+@use "pkg:@umts/brand/datatables.net";
+```
+
+Preconfigured with the bootstrap 5 theme.
+
+- adds support for media query dark theme
+- removes extra padding under `.table-responsive`
+- overrides alignment for numeric/date types
+- removes outlines for sortable headers and replaces them with a hover color
+
 ## fontawesome
 
 ```scss
@@ -48,7 +61,7 @@ Preconfigured with all available weights and with the propshaft compatible asset
 $asset-path: "your-path"; /* path where font files are located (for apps still using sprockets) */
 ```
 
-## public-sans
+## tom-select
 
 ```scss
 @use "pkg:@umts/brand/tom-select";
