@@ -15,8 +15,8 @@
     "./bootstrap": {
       "sass": "./dist/bootstrap.scss"
     },
-    "./datatables": {
-      "sass": "./dist/datatables.scss"
+    "./datatables.net": {
+      "sass": "./dist/datatables.net.scss"
     },
     "./fontawesome": {
       "sass": "./dist/fontawesome.scss"
