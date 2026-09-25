@@ -47,3 +47,12 @@ Preconfigured with all available weights and with the propshaft compatible asset
 ```scss
 $asset-path: "your-path"; /* path where font files are located (for apps still using sprockets) */
 ```
+
+## public-sans
+
+```scss
+@use "pkg:@umts/brand/tom-select";
+```
+
+Preconfigured with the bootstrap 5 theme. Assuming you are using a stimulus controller named `tom-select`, also
+includes small rule to prevent multi-selects from jumping around on page load.

@@ -1,18 +1,7 @@
-- nav_items = capture do
-  - 3.times do |n|
-    %li.nav-item= link_to "Link #{n}", '#', class: 'nav-link'
-= render layout: 'umts/brand/tabbed', locals: { heading: 'umts-brand', nav_items:, nav_expand: 'sm' } do
+= render layout: 'layouts/demo', locals: { nav_item: 'home' } do
   .card
     .card-header
-      %i.fa-brands.fa-bootstrap
-      Bootstrap
+      %i.fa-regular.fa-home
+      Home
     .card-body
-      .alert.alert-primary
-        Primary alert
-      .alert.alert-neutral
-        Neutral alert
-      .row.row-cols-1.row-cols-md-2.g-3
-        .col
-          .d-grid= button_tag 'Primary button', type: 'button', class: 'btn btn-primary'
-        .col
-          .d-grid= button_tag 'Neutral button', type: 'button', class: 'btn btn-neutral'
+      Various demos are available here for smoke testing.

@@ -11,6 +11,7 @@ export default defineConfig({
     restriction: "error",
   },
   rules: {
+    "eslint/no-new": "off",
     "import/no-default-export": "off",
     "import/no-unassigned-import": "off",
     "oxc/no-async-await": "off",

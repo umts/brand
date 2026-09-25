@@ -1,0 +1,18 @@
+= render layout: 'layouts/demo', locals: { nav_item: 'tom_select' } do
+  .card
+    .card-header
+      %i.fa-regular.fa-square-caret-down
+      Tom Select
+    .card-body
+      - options = options_for_select([''] + Array.new(5) { |n| "Option #{n + 1}" })
+      .mb-3
+        = label_tag :basic_select, 'Basic select', class: 'form-label'
+        = select_tag :basic_select, options, class: 'form-select', 'data-controller': 'tom-select'
+      .mb-3
+        = label_tag :search_select, 'Search select', class: 'form-label'
+        = select_tag :search_select, options, class: 'form-select', data: { controller: 'tom-select', search: true }
+      %div
+        = label_tag :multi_select, 'Multi select', class: 'form-label'
+        = select_tag :multi_select, options,
+                     multiple: true, class: 'form-select', data: { controller: 'tom-select', search: true }
+        .form-text Watch out for jumping on page load.
