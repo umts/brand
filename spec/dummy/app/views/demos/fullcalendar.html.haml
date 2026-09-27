@@ -1,0 +1,7 @@
+= render layout: 'layouts/demo', locals: { nav_item: 'fullcalendar' } do
+  .card
+    .card-header
+      %i.fa-regular.fa-calendar-days
+      FullCalendar
+    .card-body
+      %div{ 'data-controller': 'full-calendar' }

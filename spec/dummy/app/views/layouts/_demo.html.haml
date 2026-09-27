@@ -11,10 +11,14 @@
   %li.nav-item
     = link_to datatables_path, class: ['nav-link', nav_item == 'datatables' && 'active'] do
       %i.fa-solid.fa-table
-      Data Tables
+      Datatables
+  %li.nav-item
+    = link_to fullcalendar_path, class: ['nav-link', nav_item == 'fullcalendar' && 'active'] do
+      %i.fa-regular.fa-calendar-days
+      FullCalendar
   %li.nav-item
     = link_to tom_select_path, class: ['nav-link', nav_item == 'tom_select' && 'active'] do
       %i.fa-regular.fa-square-caret-down
-      Tom Select
-= render layout: 'umts/brand/tabbed', locals: { heading: 'Demos', nav_items:, nav_expand: 'md' } do
+      TomSelect
+= render layout: 'umts/brand/tabbed', locals: { heading: 'Demos', nav_items:, nav_expand: 'lg' } do
   = yield
