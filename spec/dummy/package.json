@@ -9,6 +9,7 @@
     "@fontsource-utils/scss": "*",
     "@fontsource/public-sans": "*",
     "@fortawesome/fontawesome-free": "*",
+    "@fullcalendar/bootstrap5": "*",
     "@umts/brand": "file:../..",
     "bootstrap": "*",
     "datatables.net": "*",
