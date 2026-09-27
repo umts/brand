@@ -5,6 +5,8 @@ class DemosController < ApplicationController
 
   def bootstrap; end
 
+  def fullcalendar; end
+
   def datatables; end
 
   def tom_select; end
