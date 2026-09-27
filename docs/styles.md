@@ -47,6 +47,14 @@ Re-exports scss variables/mixins. Variants are namespaced under `brand-`/`regula
 $asset-path: "your-path"; /* path where font files are located (for apps still using sprockets) */
 ```
 
+## fullcalendar
+
+```scss
+@use "pkg:@umts/brand/fullcalendar";
+```
+
+Preconfigured with the bootstrap 5 theme.
+
 ## public-sans
 
 ```scss
