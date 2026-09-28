@@ -7,7 +7,6 @@ RSpec.describe 'kaminari/_paginator.html.haml' do
 
   before do
     controller.request.path_parameters.merge!(controller: 'demos', action: 'index')
-    controller.extra_params = { page: }
     assign(:items, items)
     render inline: '<%= paginate @items %>' # rubocop:disable Rails/RenderInline
   end
