@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['UMTS']
   spec.email = ['transportation-it@admin.umass.edu']
   spec.homepage = 'https://github.com/umts/brand'
-  spec.summary = 'Branding for rails apps.'
+  spec.summary = 'Preconfigured styles and views for UMTS rails apps.'
   spec.license = 'MIT'
 
   spec.metadata['source_code_uri'] = spec.homepage

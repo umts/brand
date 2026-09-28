@@ -1,10 +1,8 @@
 # umts-brand
 
-Branding for rails apps.
+Preconfigured styles and views for UMTS rails apps.
 
-## Usage
-
-Documentation is hosted on [github pages](https://umts.github.io/brand/).
+Documentation and usage instructions are hosted on [github pages](https://umts.github.io/brand/).
 
 ## Contributing
 

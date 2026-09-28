@@ -1,7 +1,7 @@
 {
   "name": "@umts/brand",
   "version": "0.0.0-dev",
-  "description": "Branding for rails apps.",
+  "description": "Preconfigured styles and views for UMTS rails apps.",
   "repository": {
     "url": "https://github.com/umts/brand"
   },
