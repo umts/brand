@@ -1,7 +1,19 @@
-= render layout: 'layouts/demo', locals: { nav_item: 'home' } do
-  .card
-    .card-header
-      %i.fa-regular.fa-home
-      Home
-    .card-body
-      Various demos are available here for smoke testing.
+- if @feature.blank?
+  = render layout: 'umts/brand/tabbed', locals: { heading: 'UMTS Brand' } do
+    .card
+      .card-header Demos
+      .list-group.list-group-flush
+        - Rails.root.glob('app/views/demos/*.html.haml').each do |path|
+          :ruby
+            feature = path.basename('').to_s.split('.').first.delete_prefix('_')
+            next if feature == 'index'
+
+          = link_to feature.camelize, root_path(feature:), class: 'list-group-item list-group-item-action'
+- else
+  - nav_items = capture do
+    %li.nav-item
+      = link_to root_path, class: 'nav-link' do
+        %i.fa-solid.fa-times
+        Close
+  = render layout: 'umts/brand/tabbed', locals: { heading: @feature.camelize, nav_items:, nav_expand: 'sm' } do
+    = render partial: @feature

@@ -1,0 +1,8 @@
+:ruby
+  items = Kaminari.paginate_array(Array.new(500) { |n| "Item #{n + 1}" }).page(params[:page])
+.card
+  .card-header Demos
+  .list-group.list-group-flush
+    - items.each do |item|
+      .list-group-item= item
+= paginate items
