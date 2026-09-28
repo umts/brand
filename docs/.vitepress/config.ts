@@ -2,17 +2,22 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   base: "./",
-  title: "UMTS Brand",
+  title: "umts-brand",
   description: "Preconfigured styles and views for UMTS rails apps.",
   themeConfig: {
+    search: { provider: "local" },
     nav: [],
     sidebar: [
       {
+        text: "Setup",
+        items: [{ text: "Installation", link: "/installation" }],
+      },
+      {
+        text: "Reference",
         items: [
-          { text: "Setup", link: "/setup" },
-          { text: "Styles", link: "/styles" },
-          { text: "Views", link: "/views" },
-          { text: "Helpers", link: "/helpers" },
+          { text: "Integrations", link: "/integrations" },
+          { text: "Utilities", link: "/utilities" },
+          { text: "Trademarks", link: "/trademarks" },
         ],
       },
     ],
