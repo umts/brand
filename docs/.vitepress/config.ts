@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   base: "./",
   title: "UMTS Brand",
-  description: "Branding for rails apps",
+  description: "Preconfigured styles and views for UMTS rails apps.",
   themeConfig: {
     nav: [],
     sidebar: [
