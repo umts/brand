@@ -14,4 +14,13 @@ RSpec.describe UMTS::Brand::Engine do
       Rails.root.join('node_modules/@fontsource/public-sans/files')
     )
   end
+
+  it 'configures kaminari' do
+    expect(Kaminari.config).to have_attributes(default_per_page: 50, window: 3, outer_window: 1)
+  end
+
+  it 'removes kaminari view paths from' do
+    paths = ActionController::Base.view_paths.collect { |view_path| view_path.path.to_s }
+    expect(paths).not_to include(a_string_matching(/kaminari/))
+  end
 end

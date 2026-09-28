@@ -2,6 +2,10 @@
 
 The following partials are automatically made available by the engine under `umts/brand/*`.
 
+## kaminari
+
+Kaminari will be detected and automatically configured by the engine.
+
 ## tabbed
 
 Our default page layout, which includes a heading and space for bootstrap nav items.

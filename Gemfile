@@ -9,6 +9,7 @@ gem 'cssbundling-rails'
 gem 'haml-lint', require: false
 gem 'haml-rails'
 gem 'jsbundling-rails'
+gem 'kaminari'
 gem 'listen'
 gem 'overcommit', require: false
 gem 'propshaft'
