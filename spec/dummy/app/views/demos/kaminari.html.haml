@@ -1,0 +1,11 @@
+:ruby
+  items = Kaminari.paginate_array(Array.new(500) { |n| "Item #{n + 1}" }).page(params[:page])
+= render layout: 'layouts/demo', locals: { nav_item: 'kaminari' } do
+  .card
+    .card-header
+      %i.fa-solid.fa-arrows-left-right
+      Kaminari
+    .list-group.list-group-flush
+      - items.each do |item|
+        .list-group-item= item
+  = paginate items

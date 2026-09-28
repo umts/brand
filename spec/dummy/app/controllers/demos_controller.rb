@@ -9,5 +9,7 @@ class DemosController < ApplicationController
 
   def datatables; end
 
+  def kaminari; end
+
   def tom_select; end
 end

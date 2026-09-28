@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'bootstrap', to: 'demos#bootstrap'
   get 'fullcalendar', to: 'demos#fullcalendar'
   get 'datatables', to: 'demos#datatables'
+  get 'kaminari', to: 'demos#kaminari'
   get 'tom_select', to: 'demos#tom_select'
 end
