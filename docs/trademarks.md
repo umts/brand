@@ -15,6 +15,16 @@ page accessible by user outside Transportation).
 > UMTS::Brand.use_university_trademarks!
 > ```
 
+## mailer
+
+A mailer layout modeled after the official university marketing cloud template.
+
+```ruby
+class ApplicationMailer < ActionMailer::Base
+  layout 'umts/brand/mailer'
+end
+```
+
 ## umts_brand_favicons
 
 A helper that renders link tags for the official university favicon.
