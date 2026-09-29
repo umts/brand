@@ -2,5 +2,5 @@
 
 class ApplicationMailer < ActionMailer::Base
   default from: 'umts-brand@admin.umass.edu'
-  layout 'mailer'
+  layout 'umts/brand/mailer'
 end
