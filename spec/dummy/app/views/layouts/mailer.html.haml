@@ -1,0 +1,55 @@
+-# haml-lint:disable InlineStyles
+!!!
+%html
+  %head
+    %meta{ 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' }/
+  %body{ style: 'margin: 0;' }
+    %table{ width: '100%', border: 0, cellspacing: 0, cellpadding: 0 }
+      %tr
+        %td{ align: 'center' }
+          %div{
+            style: <<~STYLE.squish
+              max-width: 700px;
+              width: 100%;
+              margin: 0 auto;
+              text-align: left;
+              font-size: 14px;
+              font-family: Arial, Helvetica, sans-serif;
+            STYLE
+          }
+            %div{
+              style: <<~STYLE.squish
+                padding: 60px 30px;
+                background-color: #840028;
+                color: white;
+              STYLE
+            }
+              %div{
+                style: <<~STYLE.squish
+                  margin-bottom: 60px;
+                  font-size: 48px;
+                  font-family: "Times New Roman", Times, serif;
+                STYLE
+              }
+                UMassAmherst
+              %div{
+                style: <<~STYLE.squish
+                  padding: 30px 30px;
+                  background-color: white;
+                  color: black;
+                  line-height: 150%;
+                STYLE
+              }
+                = yield
+            %div{
+              style: <<~STYLE.squish
+                padding: 14px;
+                text-align: center;
+                background-color: black;
+                color: white;
+              STYLE
+            }
+              &copy;
+              = link_to 'University of Massachusetts Amherst', 'https://umass.edu', style: 'color: white;'
+              &bull;
+              Amherst, MA 01003
