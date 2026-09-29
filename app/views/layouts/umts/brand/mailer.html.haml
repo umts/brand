@@ -1,0 +1,100 @@
+-# haml-lint:disable InlineStyles, TagName
+- UMTS::Brand.protect_university_trademarks!
+!!!
+%html{ lang: I18n.locale, 'xmlns:o': 'urn:schemas-microsoft-com:office:office' }
+  %head
+    %meta{ 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' }/
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }/
+    %meta{ name: 'color-scheme', content: 'light dark' }/
+    %meta{ name: 'supported-color-schemes', content: 'light dark' }/
+    :css
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+    /[if mso]
+      %xml
+        %o:OfficeDocumentSettings
+          %o:PixelsPerInch 96
+  %body{
+    style: <<~STYLE
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    STYLE
+  }
+    %table{ width: '100%', border: 0, cellspacing: 0, cellpadding: 0, style: 'border-collapse: collapse;' }
+      %tr
+        %td{ align: 'center' }
+          /[if mso]
+            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center" style="width: 700px;"><tr><td>
+          %table{
+            width: '100%',
+            border: 0,
+            cellspacing: 0,
+            cellpadding: 0,
+            style: <<~STYLE.squish
+              max-width: 700px;
+              width: 100%;
+              margin: 0 auto;
+              text-align: left;
+              font-size: 14px;
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+            STYLE
+          }
+            %tr
+              %td{
+                bgcolor: '#840028',
+                style: <<~STYLE.squish
+                  padding: 60px 30px;
+                  background-color: #840028;
+                  color: #fefefe;
+                  font-size: 14px;
+                  font-family: Arial, Helvetica, sans-serif;
+                STYLE
+              }
+                %table{ width: '100%', border: 0, cellspacing: 0, cellpadding: 0, style: 'border-collapse: collapse;' }
+                  %tr
+                    %td{
+                      style: <<~STYLE.squish
+                        padding-bottom: 60px;
+                        font-size: 48px;
+                        font-family: "Times New Roman", Times, serif;
+                        color: #fefefe;
+                      STYLE
+                    } UMassAmherst
+                  %tr
+                    %td{
+                      bgcolor: '#fefefe',
+                      style: <<~STYLE.squish
+                        padding: 30px 30px;
+                        background-color: #fefefe;
+                        color: #010101;
+                        line-height: 150%;
+                        mso-line-height-rule: exactly;
+                        font-size: 14px;
+                        font-family: Arial, Helvetica, sans-serif;
+                      STYLE
+                    }= yield
+            %tr
+              %td{
+                bgcolor: '#010101',
+                align: 'center',
+                style: <<~STYLE.squish
+                  padding: 14px;
+                  text-align: center;
+                  background-color: #010101;
+                  color: #fefefe;
+                  font-size: 14px;
+                  font-family: Arial, Helvetica, sans-serif;
+                STYLE
+              }
+                &copy;
+                = link_to 'University of Massachusetts Amherst', 'https://umass.edu',
+                          style: 'color: #fefefe !important;'
+                &bull;
+                Amherst, MA 01003
+          /[if mso]
+            </td></tr></table>

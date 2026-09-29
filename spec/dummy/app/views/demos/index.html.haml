@@ -3,12 +3,17 @@
     .card
       .card-header Demos
       .list-group.list-group-flush
-        - Rails.root.glob('app/views/demos/*.html.haml').each do |path|
-          :ruby
-            feature = path.basename('').to_s.split('.').first.delete_prefix('_')
-            next if feature == 'index'
+        :ruby
+          links = { 'Mailer' => "#{rails_mailers_path}/demo_mailer/demo" }.tap do |collect|
+            Rails.root.glob('app/views/demos/*.html.haml').each do |path|
+              feature = path.basename('').to_s.split('.').first.delete_prefix('_')
+              next if feature == 'index'
 
-          = link_to feature.camelize, root_path(feature:), class: 'list-group-item list-group-item-action'
+              collect[feature.camelize] = root_path(feature:)
+            end
+          end
+        - links.sort.each do |name, path|
+          = link_to name, path, class: 'list-group-item list-group-item-action'
 - else
   - nav_items = capture do
     %li.nav-item

@@ -6,6 +6,7 @@ gemspec
 
 gem 'capybara'
 gem 'cssbundling-rails'
+gem 'faker'
 gem 'haml-lint', require: false
 gem 'haml-rails'
 gem 'jsbundling-rails'
