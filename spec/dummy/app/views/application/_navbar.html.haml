@@ -1,0 +1,20 @@
+%nav.navbar.navbar-expand-sm
+  = link_to t('application.name'), root_path, class: 'navbar-brand'
+  = button_tag type: 'button',
+               class: 'navbar-toggler',
+               data: { 'bs-toggle': 'collapse', 'bs-target': '#navbar-nav-items' },
+               aria: { expanded: 'false', label: 'Toggle navigation' } do
+    %span.navbar-toggler-icon
+  #navbar-nav-items.collapse.navbar-collapse
+    %ul.navbar-nav.ms-auto
+      %li.nav-item.dropdown
+        = button_tag 'Layout', type: 'button', class: 'nav-link dropdown-toggle',
+                               'data-bs-toggle': 'dropdown', 'aria-expanded': 'false'
+        %ul.dropdown-menu
+          %li
+            = button_to toggle_flash_path, class: 'dropdown-item' do
+              %i.fa-solid.fa-shuffle
+              Flash
+            = button_to toggle_layout_path, class: 'dropdown-item' do
+              %i.fa-solid.fa-shuffle
+              = session[:toggle_layout] ? 'Public' : 'Private'

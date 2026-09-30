@@ -1,0 +1,99 @@
+-# locals: (public:)
+:ruby
+  UMTS::Brand.protect_university_trademarks!
+  if public
+    public_header_links = {
+      t('umts.brand.actions.visit') => 'https://umass.edu/admissions/undergraduate-admissions/visit',
+      t('umts.brand.actions.apply') => 'https://umass.edu/admissions',
+      t('umts.brand.actions.give') => 'https://umass.edu/give',
+      safe_join([tag.i(class: 'fa-solid fa-search'),
+                 tag.span(t('umts.brand.actions.search'), class: 'visually-hidden')]) => 'https://umass.edu/search'
+    }
+    public_footer_links = {
+      t('umts.brand.actions.site_policies') => 'https://www.umass.edu/gateway/site-policies',
+      t('umts.brand.actions.privacy') => 'https://www.umass.edu/policy/information-privacy-policy',
+      t('umts.brand.actions.non_discrimination_notice') =>
+        'https://www.umass.edu/policy/affirmative-action-non-discrimination-and-title-ix-non-discrimination-policy',
+      t('umts.brand.actions.accessibility') => 'https://www.umass.edu/accessibility',
+      t('umts.brand.actions.terms_of_use') =>
+        'https://www.umass.edu/policy/acceptable-use-information-technology-resources'
+    }
+    link_reset_classes = 'text-white link-underline-light link-underline-opacity-0 link-underline-opacity-100-hover'
+  end
+!!!
+%html
+  %head
+    %title
+      - if content_for?(:title)
+        = yield :title
+        &bull;
+      = t('application.name', default: [:'umts.brand.department.name'])
+      &bull;
+      = t('umts.brand.university.name.shortform')
+    %meta{ name: 'viewport', content: 'width=device-width,initial-scale=1' }
+    = csrf_meta_tags
+    = csp_meta_tag
+    = umts_brand_favicons
+    = stylesheet_link_tag 'application.css', media: 'all'
+    = javascript_include_tag 'application.js', type: :module
+  %body.min-vh-100.d-flex.flex-column.flex-nowrap.align-items-stretch{
+    class: public ? 'bg-primary' : 'bg-body-tertiary'
+  }
+    %header
+      - if public
+        .bg-primary.text-white{ 'data-bs-theme': 'dark' }
+          .container
+            %nav.navbar.navbar-expand-sm
+              = link_to 'https://umass.edu', class: 'navbar-brand' do
+                = image_tag 'umts/brand/university-wordmark-longform.svg',
+                            alt: t('umts.brand.university_name_longformform'),
+                            height: '30px', class: 'd-none d-lg-block'
+                = image_tag 'umts/brand/university-wordmark-shortform.svg',
+                            alt: t('umts.brand.university_name_shortform'),
+                            height: '30px', class: 'd-block d-lg-none'
+              = button_tag type: 'button', class: 'navbar-toggler',
+                           data: { 'bs-toggle': 'collapse', 'bs-target': '#university-header-nav-items' },
+                           aria: { controls: 'university-header-nav-items', expanded: 'false',
+                                   label: t('umts.brand.university_navigation') } do
+                %span.navbar-toggler-icon
+              #university-header-nav-items.collapse.navbar-collapse
+                %ul.navbar-nav.nav-underline.gap-1.ms-auto
+                  - public_header_links.each do |name, href|
+                    %li.nav-item= link_to name, href, class: 'nav-link text-white'
+        .bg-body.text-body.border-bottom
+          .container.py-4
+            .d-flex.align-items-center.gap-3
+              = image_tag 'umts/brand/university-collegiate-m.svg',
+                          alt: t('umts.brand.university.name.shortform'), height: '70px'
+              .fs-4
+                .lh-sm.text-body.text-decoration-none= t('umts.brand.department.parent_name')
+                .lh-sm.text-primary-emphasis.text-decoration-none.fw-bold= t('umts.brand.department.name')
+      - navbar_content = render partial: 'navbar'
+      - if navbar_content.gsub(/<!--.*?-->/m, '').present?
+        .bg-body-tertiary.border-bottom
+          .container= navbar_content
+    %main.bg-body.flex-grow-1
+      .container.my-3
+        = render partial: 'flash'
+        = yield
+    - if public
+      %footer
+        .bg-primary.text-white{ 'data-bs-theme': 'dark' }
+          .container.py-4
+            .row.g-3
+              .col-12.col-lg-auto.d-flex.justify-content-center.justify-content-lg-start.align-items-center
+                = link_to 'https://umass.edu' do
+                  = image_tag 'umts/brand/university-collegiate-m-lockup-longform.svg',
+                              alt: t('umts.brand.university.name.longform'), height: '60px'
+              .col-12.col-lg.d-flex.flex-column.justify-content-between.align-items-center.align-items-lg-end.gap-2
+                %div
+                  &copy;#{Date.current.year}
+                  = link_to t('umts.brand.university.name.longform'), 'https://umass.edu', class: link_reset_classes
+                %nav
+                  :ruby
+                    nav_links = public_footer_links.map do |text, href|
+                      link_to(text, href, class: "d-block d-md-inline text-center #{link_reset_classes}")
+                    end
+                  - nav_link_separator = capture do
+                    %span.d-none.d-md-inline.mx-1<> &bull;
+                  = safe_join nav_links, nav_link_separator

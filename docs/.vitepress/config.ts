@@ -16,8 +16,8 @@ export default defineConfig({
         text: "Reference",
         items: [
           { text: "Integrations", link: "/integrations" },
+          { text: "Layouts", link: "/layouts" },
           { text: "Utilities", link: "/utilities" },
-          { text: "Trademarks", link: "/trademarks" },
         ],
       },
     ],
