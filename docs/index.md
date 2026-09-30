@@ -14,10 +14,10 @@ features:
   - title: Integrations
     details: Preconfigured styles/views for common libraries.
     link: /integrations
+  - title: Layouts
+    details: Batteries-included application and mailer layouts.
+    link: /layouts
   - title: Utilities
     details: General purpose styles/views for design consistency.
     link: /utilities
-  - title: Trademarks
-    details: Official university branded layout and favicon components.
-    link: /trademarks
 ---
