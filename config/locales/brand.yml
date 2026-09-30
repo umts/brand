@@ -1,0 +1,22 @@
+en:
+  umts:
+    brand:
+      department:
+        name: Transportation Services
+        parent_name: Facilities & Campus Services
+      flash:
+        dismiss: Dismiss
+      university:
+        name:
+          shortform: UMass Amherst
+          longform: University of Massachusetts Amherst
+        navigate: Toggle university navigation
+        visit: Visit
+        apply: Apply
+        give: Give
+        search: Search
+        site_policies: Site policies
+        privacy: Privacy
+        non_discrimination_notice: Non-discrimination notice
+        accessibility: Accessibility
+        terms_of_use: Terms of use
