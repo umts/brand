@@ -98,3 +98,15 @@ class ApplicationMailer < ActionMailer::Base
   layout 'umts/brand/mailer'
 end
 ```
+
+## Errors
+
+Custom dynamic error pages that work with the branded application layouts.
+
+```ruby
+# config/initializers/brand.rb
+
+UMTS::Brand.use_dynamic_error_pages! # controller inherits from ApplicationController by default
+# or
+UMTS::Brand.use_dynamic_error_pages! parent_controller: MyController # if you need to customize the parent controller
+```

@@ -16,6 +16,21 @@ en:
       department:
         name: Transportation Services
         parent_name: Facilities & Campus Services
+      errors:
+        show:
+          default: We're sorry, but something went wrong.
+          400: The server cannot process the request due to a client error. Please check the request and try again.
+          401: >
+            You do not have permission to access this page.
+            If you believe you should have access, please contact the site administrator.
+          403: >
+            You do not have permission to access this page.
+            If you believe you should have access, please contact the site administrator.
+          404: >
+            The page you were looking for doesn't exist.
+            You may have mistyped the address or the page may have moved.
+          406: Your browser is not supported. Please upgrade your browser to continue.
+          422: The change you wanted was rejected. Please try again.
       university:
         name:
           shortform: UMass Amherst
