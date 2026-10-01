@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>umts/renovate-config"],
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "packageRules": [
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchPackageNames": ["@fontsource-utils/scss", "bootstrap"],
+      "matchUpdateTypes": ["major", "minor"],
+      "semanticCommitType": "fix"
+    }
+  ]
+}
