@@ -19,8 +19,12 @@ RSpec.describe UMTS::Brand::Engine do
     expect(Kaminari.config).to have_attributes(default_per_page: 50, window: 3, outer_window: 1)
   end
 
-  it 'removes kaminari view paths from' do
+  it 'removes default kaminari view paths' do
     paths = ActionController::Base.view_paths.collect { |view_path| view_path.path.to_s }
     expect(paths).not_to include(a_string_matching(/kaminari/))
+  end
+
+  it 'configures error pages' do
+    expect(Rails.application.config.exceptions_app).to eq(Rails.application.routes)
   end
 end

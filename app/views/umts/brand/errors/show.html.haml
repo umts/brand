@@ -2,7 +2,6 @@
   .d-flex.justify-content-center.align-items-center.position-relative
     .display-splash.lh-1.fw-bold.text-body.text-opacity-10= @code
     .position-absolute.display-3.text-primary-emphasis= @name
-  - if @description.present?
-    .row
-      .col-lg-8.offset-lg-2
-        .fs-4= @description
+  .row
+    .col-lg-8.offset-lg-2
+      .fs-4= @description

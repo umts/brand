@@ -6,7 +6,7 @@ module UMTS
       def show
         @code = params[:code]
         @name = Rack::Utils::HTTP_STATUS_CODES[@code]
-        @description = t(".#{@code}", default: nil)
+        @description = t(".#{@code}", default: t('.default'))
       end
     end
   end
