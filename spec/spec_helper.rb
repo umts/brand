@@ -2,13 +2,12 @@
 
 require 'simplecov'
 
-SimpleCov.start do
-  cover '{app,lib}/**/*.{rb,haml}'
-  cover_views '{app,lib}/**/*.haml'
+SimpleCov.start 'rails' do
+  cover_views
   skip 'lib/umts/brand/version.rb'
   track_tests
   enable_coverage :branch, :method
-  minimum_coverage line: 100, branch: 100
+  minimum_coverage line: 100, branch: 100, method: 100
 end
 
 RSpec.configure do |config|
