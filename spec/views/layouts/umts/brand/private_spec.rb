@@ -11,7 +11,7 @@ RSpec.describe 'layouts/umts/brand/private.html.haml' do
 
   before do
     allow(UMTS::Brand).to receive(:using_university_trademarks).and_return(trademark_authorization)
-    controller.prepend_view_path UMTS::Brand::Engine.root.join('app/views/application')
+    controller.lookup_context.prefixes.unshift('application')
   end
 
   context 'without university trademark authorization' do
@@ -51,7 +51,7 @@ RSpec.describe 'layouts/umts/brand/private.html.haml' do
   end
 
   context 'with a flash partial override' do
-    before { stub_template '_flash.html.haml' => 'Hello, Flash' }
+    before { stub_template 'application/_flash.html.haml' => 'Hello, Flash' }
 
     it 'renders successfully' do
       call
@@ -60,7 +60,7 @@ RSpec.describe 'layouts/umts/brand/private.html.haml' do
   end
 
   context 'with a navbar partial override' do
-    before { stub_template '_navbar.html.haml' => 'Hello, Navbar' }
+    before { stub_template 'application/_navbar.html.haml' => 'Hello, Navbar' }
 
     it 'renders successfully' do
       call
