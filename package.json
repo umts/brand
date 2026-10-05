@@ -39,7 +39,7 @@
     "lint:css": "stylelint **/*.css **/*.scss"
   },
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "< 10",
+    "conventional-changelog-conventionalcommits": "< 11",
     "oxfmt": "*",
     "oxlint": "*",
     "semantic-release": "*",
