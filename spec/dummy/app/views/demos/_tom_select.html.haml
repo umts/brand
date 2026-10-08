@@ -8,8 +8,14 @@
     .mb-3
       = label_tag :search_select, 'Search select', class: 'form-label'
       = select_tag :search_select, options, class: 'form-select', data: { controller: 'tom-select', search: true }
-    %div
+    .mb-3
       = label_tag :multi_select, 'Multi select', class: 'form-label'
       = select_tag :multi_select, options,
                    multiple: true, class: 'form-select', data: { controller: 'tom-select', search: true }
       .form-text Watch out for jumping on page load.
+    .mb-3
+      = label_tag :input_group_select, 'Input group select', class: 'form-label'
+      .input-group
+        = select_tag :input_group_select, options, class: 'form-select', 'data-controller': 'tom-select'
+        = select_tag :input_group_select2, options, class: 'form-select', 'data-controller': 'tom-select'
+        = button_tag 'Button', type: :button, class: 'btn btn-neutral'
