@@ -76,5 +76,5 @@ Automatically detected and set up.
 ```
 
 - imports bootstrap 5 theme
-- adds a small rule to prevent multi-selects from jumping around (assumes you are using a stimulus controller named
-  `tom-select`).
+- prevents multi-selects from jumping around (assumes you are using a stimulus controller named `tom-select`).
+- fixes left border radius when the first child of an input group
