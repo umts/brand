@@ -16,21 +16,23 @@ Batteries-included application and mailer layouts.
 
 ## Application
 
-Two application layouts for public/private use. Both include a standard title tag, meta tags (including favicons),
-link tags, script tags, a navbar and flashes. The public version adds an official university branded header and footer.
+Three application layouts are included. All include a standard title tag, meta tags (including favicons),
+link tags, script tags, and flashes.
+
+- `umts/brand/bare` is as minimal as possible and has no header/footer content
+- `umts/brand/private` adds a navbar section in the header
+- `umts/brand/public` adds university branded header/footer content
 
 ```ruby
 class ApplicationController < ActionController::Base
-  layout 'umts/brand/public' # for public facing apps
-  # or
-  layout 'umts/brand/private' # for internal apps
+  layout 'umts/brand/{layout}'
 end
 ```
 
 ### Options
 
-The following customizations are supported. These are intentionally as limited as possible to enforce consistency and
-will be expanded only if absolutely necessary.
+The following general customizations are supported. These are intentionally as limited as possible to enforce consistency
+and will be expanded only if absolutely necessary.
 
 #### Title
 
@@ -66,9 +68,12 @@ Implement custom flashes by adding a `flash` partial in your app's view path loo
     render your content from the flash hash yourself).
 ```
 
-#### Navbar
+#### Navbar (_required_ for private/public)
 
 Implement your navbar by adding a `navbar` partial in your app's view path lookup chain.
+
+The public/private layouts assume wrap the content in a styled container and assume partial will always be defined.
+If you wish to omit a navbar, use the `bare` layout instead.
 
 ```haml
 -# app/view/application/_navbar.html.haml
@@ -76,7 +81,7 @@ Implement your navbar by adding a `navbar` partial in your app's view path looku
   -# ...
 ```
 
-#### Department names (public only)
+#### Department names (public)
 
 Customize the department names using the following translations.
 
