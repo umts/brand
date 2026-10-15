@@ -1,1 +1,4 @@
-= render template: 'layouts/umts/brand/application', locals: { public: false, navbar: true }
+- content_for :header do
+  .bg-body-tertiary.border-bottom
+    .container= render partial: 'navbar'
+= render template: 'layouts/umts/brand/application', locals: { body: 'bg-body-tertiary' }
