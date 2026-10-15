@@ -1,4 +1,4 @@
--# locals: (public:)
+-# locals: (public:, navbar:)
 :ruby
   UMTS::Brand.protect_university_trademarks!
   if public
@@ -68,10 +68,11 @@
               .fs-4
                 .lh-sm.text-body.text-decoration-none= t('umts.brand.department.parent_name')
                 .lh-sm.text-primary-emphasis.text-decoration-none.fw-bold= t('umts.brand.department.name')
-      - navbar_content = render partial: 'navbar'
-      - if navbar_content.gsub(/<!--.*?-->/m, '').present?
-        .bg-body-tertiary.border-bottom
-          .container= navbar_content
+      - if navbar
+        - navbar_content = render partial: 'navbar'
+        - if navbar_content.gsub(/<!--.*?-->/m, '').present?
+          .bg-body-tertiary.border-bottom
+            .container= navbar_content
     %main.bg-body.flex-grow-1
       .container.my-3
         = render partial: 'flash'
