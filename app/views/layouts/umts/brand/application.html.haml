@@ -1,8 +1,10 @@
 -# locals: (body: nil)
 - UMTS::Brand.protect_university_trademarks!
 !!!
-%html
+%html{ lang: I18n.locale }
   %head
+    %meta{ charset: 'UTF-8' }
+    %meta{ name: 'viewport', content: 'width=device-width,initial-scale=1' }
     %title
       - if content_for?(:title)
         = yield :title
@@ -10,7 +12,6 @@
       = t('application.name', default: [:'umts.brand.department.name'])
       &bull;
       = t('umts.brand.university.name.shortform')
-    %meta{ name: 'viewport', content: 'width=device-width,initial-scale=1' }
     = csrf_meta_tags
     = csp_meta_tag
     = umts_brand_favicons
