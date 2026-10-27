@@ -1,21 +1,11 @@
 en:
   umts:
     brand:
-      actions:
-        accessibility: Accessibility
-        apply: Apply
-        dismiss: Dismiss
-        give: Give
-        non_discrimination_notice: Non-discrimination notice
-        privacy: Privacy
-        search: Search
-        site_policies: Site policies
-        terms_of_use: Terms of use
-        toggle_navigation: Toggle university navigation
-        visit: Visit
       department:
         name: Transportation Services
         parent_name: Facilities & Campus Services
+      flash:
+        dismiss: Dismiss
       errors:
         show:
           default: We're sorry, but something went wrong.
@@ -32,6 +22,16 @@ en:
           406: Your browser is not supported. Please upgrade your browser to continue.
           422: The change you wanted was rejected. Please try again.
       university:
+        accessibility: Accessibility
+        apply: Apply
+        give: Give
         name:
           shortform: UMass Amherst
           longform: University of Massachusetts Amherst
+        non_discrimination_notice: Non-discrimination notice
+        privacy: Privacy
+        search: Search
+        site_policies: Site policies
+        terms_of_use: Terms of use
+        toggle_navigation: Toggle university navigation
+        visit: Visit

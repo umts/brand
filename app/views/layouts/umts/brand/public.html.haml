@@ -1,19 +1,19 @@
 :ruby
   UMTS::Brand.protect_university_trademarks!
   public_header_links = {
-    t('umts.brand.actions.visit') => 'https://umass.edu/admissions/undergraduate-admissions/visit',
-    t('umts.brand.actions.apply') => 'https://umass.edu/admissions',
-    t('umts.brand.actions.give') => 'https://umass.edu/give',
+    t('umts.brand.university.visit') => 'https://umass.edu/admissions/undergraduate-admissions/visit',
+    t('umts.brand.university.apply') => 'https://umass.edu/admissions',
+    t('umts.brand.university.give') => 'https://umass.edu/give',
     safe_join([tag.i(class: 'fa-solid fa-search'),
-               tag.span(t('umts.brand.actions.search'), class: 'visually-hidden')]) => 'https://umass.edu/search'
+               tag.span(t('umts.brand.university.search'), class: 'visually-hidden')]) => 'https://umass.edu/search'
   }
   public_footer_links = {
-    t('umts.brand.actions.site_policies') => 'https://www.umass.edu/gateway/site-policies',
-    t('umts.brand.actions.privacy') => 'https://www.umass.edu/policy/information-privacy-policy',
-    t('umts.brand.actions.non_discrimination_notice') =>
+    t('umts.brand.university.site_policies') => 'https://www.umass.edu/gateway/site-policies',
+    t('umts.brand.university.privacy') => 'https://www.umass.edu/policy/information-privacy-policy',
+    t('umts.brand.university.non_discrimination_notice') =>
       'https://www.umass.edu/policy/affirmative-action-non-discrimination-and-title-ix-non-discrimination-policy',
-    t('umts.brand.actions.accessibility') => 'https://www.umass.edu/accessibility',
-    t('umts.brand.actions.terms_of_use') =>
+    t('umts.brand.university.accessibility') => 'https://www.umass.edu/accessibility',
+    t('umts.brand.university.terms_of_use') =>
       'https://www.umass.edu/policy/acceptable-use-information-technology-resources'
   }
   link_reset_classes = 'text-white link-underline-light link-underline-opacity-0 link-underline-opacity-100-hover'
