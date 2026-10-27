@@ -72,7 +72,7 @@ Implement custom flashes by adding a `flash` partial in your app's view path loo
 
 Implement your navbar by adding a `navbar` partial in your app's view path lookup chain.
 
-The public/private layouts assume wrap the content in a styled container and assume partial will always be defined.
+The public/private layouts wrap the content in a styled container and assume the partial will always be defined.
 If you wish to omit a navbar, use the `bare` layout instead.
 
 ```haml
