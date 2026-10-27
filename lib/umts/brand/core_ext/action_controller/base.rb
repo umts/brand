@@ -19,7 +19,8 @@ module UMTS
           private
 
           def flash_success(flash, subject, action)
-            action = t('.performed', default: [:"performed.#{action}", :"umts.brand.flash.performed.#{action}"])
+            action = t(".#{action}.performed",
+                       default: [:"performed.#{action}", :"umts.brand.flash.performed.#{action}"])
             subject = subject.model_name.human.downcase if subject.respond_to?(:model_name)
             flash[:notice] = t('umts.brand.flash.success', action:, subject:)
           end
