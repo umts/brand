@@ -6,6 +6,11 @@ en:
         parent_name: Facilities & Campus Services
       flash:
         dismiss: Dismiss
+        success: Successfully %{action} %{subject}
+        performed:
+          create: created
+          update: updated
+          destroy: deleted
       errors:
         show:
           default: We're sorry, but something went wrong.

@@ -10,8 +10,9 @@ class ApplicationController < ActionController::Base
   def flash_from_session
     return unless session[:toggle_flash]
 
-    flash.now[:alert] = Faker::Lorem.paragraph(sentence_count: 5)
-    flash.now[:notice] = Faker::Lorem.paragraph(sentence_count: 5)
+    model = Demo.new.tap(&:validate)
+    flash_success_now_for(model, :create)
+    flash_errors_now_for(model)
   end
 
   def layout_from_session = "umts/brand/#{session[:toggle_layout] ? 'private' : 'public'}"

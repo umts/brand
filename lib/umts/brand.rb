@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'brand/core_ext'
 require_relative 'brand/engine'
 require_relative 'brand/version'
 
