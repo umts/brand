@@ -36,6 +36,17 @@ $display-font-sizes: (
   }
 }
 
+.navbar-flush {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-nav-link-padding-x: 0;
+
+  .nav-link {
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0;
+  }
+}
+
 .text-opacity-10 {
   --bs-text-opacity: 0.1;
 }

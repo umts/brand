@@ -16,9 +16,8 @@
           = link_to name, path, class: 'list-group-item list-group-item-action'
 - else
   - nav_items = capture do
-    %li.nav-item
-      = link_to root_path, class: 'nav-link' do
-        %i.fa-solid.fa-times
-        Close
+    = link_to root_path, class: 'nav-link' do
+      %i.fa-solid.fa-times
+      Close
   = render layout: 'umts/brand/tabbed', locals: { heading: @feature.camelize, nav_items:, nav_expand: 'sm' } do
     = render partial: @feature
