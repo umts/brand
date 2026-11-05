@@ -1,0 +1,35 @@
+.mb-3
+  = render layout: 'umts/brand/card' do |card|
+    - card.heading 'Without nav items'
+    - card.body do
+      .card-body
+        Card body
+.mb-3
+  = render layout: 'umts/brand/card' do |card|
+    - card.heading 'With some nav items'
+    - card.nav_items do
+      = link_to 'Link', '#', class: 'nav-link'
+      .dropdown
+        = button_tag 'Button',
+                     type: 'button',
+                     class: 'nav-link dropdown-toggle',
+                     'data-bs-toggle': 'dropdown',
+                     'aria-expanded': 'false'
+        %ul.dropdown-menu.dropdown-menu-end
+          %li= button_tag 'Dropdown button', type: 'button', class: 'dropdown-item'
+    - card.body do
+      .card-body
+        Card body
+.mb-3
+  = render layout: 'umts/brand/card' do |card|
+    - card.heading 'With many nav items that should wrap cleanly'
+    - card.nav_items do
+      = link_to 'Nav item 1', '#', class: 'nav-link'
+      = link_to 'Nav item 2', '#', class: 'nav-link'
+      = link_to 'Nav item 3', '#', class: 'nav-link'
+      = link_to 'Nav item 4', '#', class: 'nav-link'
+      = link_to 'Nav item 5', '#', class: 'nav-link'
+      = link_to 'Nav item 6', '#', class: 'nav-link'
+    - card.body do
+      .list-group.list-group-flush
+        .list-group-item List group

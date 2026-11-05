@@ -41,18 +41,47 @@ Otherwise, it will interpolate whatever the subject is directly.
 
 The error helpers will construct a flash message from any validation error _currently_ present on the passed subject.
 
-## Tabbed
+## Resource layout
 
-Our default page layout, which includes a heading and space for bootstrap nav items.
+Our default page layout, which includes a heading and space for bootstrap nav items. Uses a collector pattern
+to cleanly collect subsections.
 
 ```haml
 -# Without nav items
-= render layout: 'umts/brand/tabbed', locals: { heading: 'Page title' } do
-  Page content
+= render layout: 'umts/brand/resource', locals: { heading: 'Page title' } do |resource|
+  - resource.heading 'Page title'
+  - resource.body do
+    Page content
 
 -# With nav items
-- nav_items = capture do
-  %li.nav-item= link_to 'Nav link', '#', class: 'nav-link'
-= render layout: 'umts/brand/tabbed', locals: { heading: 'Navigable page title', nav_items:, nav_expand: 'sm' } do
-  Navigable page content
+= render layout: 'umts/brand/resource', locals: { nav_expand: 'sm' } do |resource|
+  - resource.heading 'Navigable page title'
+  - resource.nav_items do
+    = link_to 'Nav link', '#', class: 'nav-link'
+  - resource.body do
+    Navigable page content
+```
+
+## Card layout
+
+Our card layout, which includes a heading and space for bootstrap nav items. Uses a collector pattern
+to cleanly collect subsections.
+
+Unlike the resource layout, the nav does not support collapse. If you need responsiveness you should manually
+hide/show your nav items (maintain a flat version and a dropdown version).
+
+```haml
+-# Without nav items
+= render layout: 'umts/brand/card' do |card|
+  - card.heading 'Card title'
+  - card.body do
+    Card content
+
+-# With nav items
+= render layout: 'umts/brand/card' do |card|
+  - card.heading 'Navigable card title'
+  - card.nav_items do
+    = link_to 'Nav link', '#', class: 'nav-link'
+  - card.body do
+    Navigable card content
 ```
