@@ -1,7 +1,7 @@
 - { alert: %w[primary fa-triangle-exclamation], notice: %w[neutral fa-circle-info] }.each do |type, (variant, icon)|
   - next if flash[type].blank?
 
-  .alert.fade.show{ role: 'alert', class: "alert-#{variant}" }
+  .alert.fade.show{ role: 'alert', class: "alert-#{variant}", 'data-turbo-temporary': true }
     .row.gx-3
       .col-auto
         %i.fa-solid.fa-fw{ class: icon }
