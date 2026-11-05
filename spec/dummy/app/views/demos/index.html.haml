@@ -3,7 +3,14 @@
     - resource.heading 'UMTS Brand'
     - resource.nav_items do
       = link_to 'Link', '#', class: 'nav-link'
-      = button_tag 'Button', type: 'button', class: 'nav-link'
+      .dropdown
+        = button_tag 'Button',
+                     type: 'button',
+                     class: 'nav-link dropdown-toggle',
+                     'data-bs-toggle': 'dropdown',
+                     'aria-expanded': 'false'
+        %ul.dropdown-menu.dropdown-menu-end
+          %li= button_tag 'Dropdown button', type: 'button', class: 'dropdown-item'
     - resource.body do
       = render layout: 'umts/brand/card' do |card|
         - card.heading 'Demos'

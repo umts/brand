@@ -9,7 +9,14 @@
     - card.heading 'With some nav items'
     - card.nav_items do
       = link_to 'Link', '#', class: 'nav-link'
-      = button_tag 'Button', type: 'button', class: 'nav-link'
+      .dropdown
+        = button_tag 'Button',
+                     type: 'button',
+                     class: 'nav-link dropdown-toggle',
+                     'data-bs-toggle': 'dropdown',
+                     'aria-expanded': 'false'
+        %ul.dropdown-menu.dropdown-menu-end
+          %li= button_tag 'Dropdown button', type: 'button', class: 'dropdown-item'
     - card.body do
       .card-body
         Card body
