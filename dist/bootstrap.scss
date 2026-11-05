@@ -36,6 +36,10 @@ $display-font-sizes: (
   }
 }
 
+.navbar-nav .nav-link {
+  text-align: left;
+}
+
 .navbar-flush {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0;

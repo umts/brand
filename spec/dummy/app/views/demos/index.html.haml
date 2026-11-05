@@ -1,6 +1,9 @@
 - if @feature.blank?
-  = render layout: 'umts/brand/resource' do |resource|
+  = render layout: 'umts/brand/resource', locals: { nav_expand: 'sm' } do |resource|
     - resource.heading 'UMTS Brand'
+    - resource.nav_items do
+      = link_to 'Link', '#', class: 'nav-link'
+      = button_tag 'Button', type: 'button', class: 'nav-link'
     - resource.body do
       = render layout: 'umts/brand/card' do |card|
         - card.heading 'Demos'
