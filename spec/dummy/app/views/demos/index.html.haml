@@ -1,23 +1,28 @@
 - if @feature.blank?
-  = render layout: 'umts/brand/tabbed', locals: { heading: 'UMTS Brand' } do
-    .card
-      .card-header Demos
-      .list-group.list-group-flush
-        :ruby
-          links = { 'Mailer' => "#{rails_mailers_path}/demo_mailer/demo" }.tap do |collect|
-            Rails.root.glob('app/views/demos/*.html.haml').each do |path|
-              feature = path.basename('').to_s.split('.').first.delete_prefix('_')
-              next if feature == 'index'
+  = render layout: 'umts/brand/resource' do |resource|
+    - resource.heading 'UMTS Brand'
+    - resource.body do
+      = render layout: 'umts/brand/card' do |card|
+        - card.heading 'Demos'
+        - card.body do
+          .list-group.list-group-flush
+            :ruby
+              links = { 'Mailer' => "#{rails_mailers_path}/demo_mailer/demo" }.tap do |collect|
+                Rails.root.glob('app/views/demos/*.html.haml').each do |path|
+                  feature = path.basename('').to_s.split('.').first.delete_prefix('_')
+                  next if feature == 'index'
 
-              collect[feature.camelize] = root_path(feature:)
-            end
-          end
-        - links.sort.each do |name, path|
-          = link_to name, path, class: 'list-group-item list-group-item-action'
+                  collect[feature.camelize] = root_path(feature:)
+                end
+              end
+            - links.sort.each do |name, path|
+              = link_to name, path, class: 'list-group-item list-group-item-action'
 - else
-  - nav_items = capture do
-    = link_to root_path, class: 'nav-link' do
-      %i.fa-solid.fa-times
-      Close
-  = render layout: 'umts/brand/tabbed', locals: { heading: @feature.camelize, nav_items:, nav_expand: 'sm' } do
-    = render partial: @feature
+  = render layout: 'umts/brand/resource', locals: { nav_expand: 'sm' } do |resource|
+    - resource.heading @feature.camelize
+    - resource.nav_items do
+      = link_to root_path, class: 'nav-link' do
+        %i.fa-solid.fa-times
+        Close
+    - resource.body do
+      = render partial: @feature

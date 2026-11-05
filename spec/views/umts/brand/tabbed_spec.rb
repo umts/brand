@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe 'umts/brand/_tabbed.html.haml' do
-  before { render(layout: 'umts/brand/tabbed', locals:) { content } }
+RSpec.describe 'umts/brand/_resource.html.haml' do
+  before { render(layout: 'umts/brand/resource', locals:) { content } }
 
   context 'without nav items' do
     let(:locals) { { heading: 'Bare heading' } }
