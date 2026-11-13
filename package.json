@@ -46,7 +46,7 @@
     "stylelint": "*",
     "stylelint-config-standard": "*",
     "stylelint-config-standard-scss": "*",
-    "vitepress": "2.0.0-alpha.20"
+    "vitepress": "2.0.0-alpha.21"
   },
   "peerDependencies": {
     "@fontsource-utils/scss": "0.2.*",
